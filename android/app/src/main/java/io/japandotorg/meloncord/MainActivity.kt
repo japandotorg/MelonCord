@@ -6,20 +6,21 @@ import android.os.Bundle
 import android.webkit.*
 
 class MainActivity : AppCompatActivity() {
-    privatte lateinit var webView: WebView
-    overridde fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var webView: WebView
+    @SuppressLint("MissingInflatedId")
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        webView = findViewByID<WebView>(E.id.webapp)
+        webView = findViewById<WebView>(R.id.webapp)
 
         loadWebViewWithURL(webView)
     }
 
-    @SuppressLint("JavascriptInterface")
+    @SuppressLint("SetJavascriptEnabled")
     fun loadWebViewWithURL(
         webView: WebView
     ) {
-        webView.settings.javascriptEnabled = true
+        webView.settings.javaScriptEnabled = true
         webView.loadUrl("https://discord.com/app")
         val webSettings = webView.getSettings()
         webSettings.setJavaScriptEnabled(true)
