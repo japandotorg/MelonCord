@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk 33
-    defaultCofig {
+    compileSdkVersion 32
+    defaultConfig {
         applicationId "io.japandotorg.meloncord"
-        minSdk 17
-        targetSdk 33
+        minSdkVersion 17
+        targetSdkVersion 32
         versionCode 1
-        versionName "alpha"
+        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -24,7 +24,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = '1.8'
     }
 }
 
