@@ -7,3 +7,5 @@
 .externalNativeBuild
 local.properties
 .vscode
+*.flutter-plugins*
+/.dart_tool/*
